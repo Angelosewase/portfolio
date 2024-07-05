@@ -18,9 +18,9 @@ function Contacts() {
       <motion.div className=" flex items-center justify-center relative h-[60vh]" id="contacts" initial={{opacity:0}} whileInView={{opacity:1}} transition={{type:'spring', bounce:0.5, duration:2}}>
         <div className="h-auto md:h-auto lg:h-[100%]   rounded-xl shadow-md bg-white   absolute top-[80px] border-black px-2 lg:right-56 lg:left-56 flex p-4  flex-col lg:flex-row w-auto md:w-[90%] lg:w-auto">
           <div className="flex-1  p-6 ">
-            <h1 className="text-3xl font-bold ">Let's discuss your project </h1>
+            <h1 className="text-3xl font-bold ">Let&apos;s discuss your project </h1>
             <p className="text-gray-500   text-xs  mt-1 leading-4">
-              Always happy to help! Don't hesitate to contact me if you need
+              Always happy to help! Don&apos;t hesitate to contact me if you need
               anything.
             </p>
             <div className="mt-6 flex flex-col gap-4">

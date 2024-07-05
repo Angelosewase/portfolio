@@ -20,16 +20,16 @@ function About() {
           <ContactComponent />
           </div>
           <div className="flex-1 p-10 ">
-              <h1 className="text-3xl font-bold ">I'm a software developer </h1>
+              <h1 className="text-3xl font-bold ">I&apos;m a software developer </h1>
             <div className="mt-10">
               <p className="mt-5 text-stone-600 leading-5">
-                Hi! I'm Sewase Angel, a software developer with a passion for
+                Hi! I&apos;m Sewase Angel, a software developer with a passion for
                 turning ideas into code. Creativity, attention to detail, and a
                 love for learning fuel my work.
               </p>
               <p className=" text-stone-600 leading-5">
                 I thrive in collaborative environments, believing teamwork
-                unlocks the best solutions. Let's chat if you're looking for a
+                unlocks the best solutions. Let&apos;s chat if you&apos;re looking for a
                 developer who brings a positive attitude and a creative spark to
                 the table!
               </p>
@@ -52,7 +52,7 @@ const More:React.FC=()=>{
     return <>
       <div className="mt-10">
         <button  className="px-5 py-1.5 text-white font-semibold bg-purple-500  rounded-lg hover:shadow-lg shadow-gray-200">Resume</button>
-        <button className="ml-2 px-6 py-1.5 hover:bg-sky-50 rounded-lg  animate-bounce hover:animate-none ">let's chat </button>
+        <button className="ml-2 px-6 py-1.5 hover:bg-sky-50 rounded-lg  animate-bounce hover:animate-none ">let&apos;s chat </button>
       </div>
     </>
 }

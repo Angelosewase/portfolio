@@ -15,8 +15,8 @@ function Services() {
         </h1>
         <p className="text-gray-400 font-semibold text-center md:w-[50%] text-sm mt-6 ">
           {" "}
-          As a developer, I'm highly interested in collaborating on projects.
-          I'm a quick learner and a strong team player. I'm confident I can make
+          As a developer, I&apos;m highly interested in collaborating on projects.
+          I&apos;m a quick learner and a strong team player. I&apos;m confident I can make
           a real difference in achieving the project goals. Let me know how we
           can move forward!
         </p>
@@ -24,7 +24,7 @@ function Services() {
           href=""
           className="border border-purple-500  mt-6 mb-3  px-5 py-2 flex   items-center gap-2 bg-purple-500 text-white transition-all  rounded hover:scale-110  "
         >
-          Let's work together
+          Let&apos;s work together
           <ArrowLongRightIcon color="" width={20} height={20} />
         </a>
       </div>
