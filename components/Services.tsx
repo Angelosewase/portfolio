@@ -11,7 +11,7 @@ function Services() {
           Do you have a project idea ?
         </h1>
         <h1 className="text-2xl md:text-4xl font-semibold text-white">
-          Let's discuss your project{" "}
+          Let&apos;s discuss your project{" "}
         </h1>
         <p className="text-gray-400 font-semibold text-center md:w-[50%] text-sm mt-6 ">
           {" "}
