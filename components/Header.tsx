@@ -37,25 +37,22 @@ const Navigation: React.FC = () => {
   return (
     <>
       <div className=" hidden w-[50%] h-full  lg:flex items-center justify-between ">
-        <div className="flex-1 flex justify-between items-center ">
+        <div className="flex-1 flex  gap-10 items-center justify-center">
           <a href="" className="text-sm font-semibold font-sans">
             Home
           </a>
-          <a href="" className="text-sm font-semibold font-sans">
+          <a href="#about" className="text-sm font-semibold font-sans">
             About{" "}
           </a>
-          <a href="" className="text-sm font-semibold font-sans">
-            Process
+          <a href="#projects" className="text-sm font-semibold font-sans">
+            projects
           </a>
-          <a href="" className="text-sm font-semibold font-sans">
-            Portfolio
-          </a>
-          <a href="" className="text-sm font-semibold font-sans">
+          <a href="#services" className="text-sm font-semibold font-sans">
             Services
-          </a>
+          </a>  
         </div>
-        <button className="bg-purple-400 rounded px-4 py-2 ml-10 text-white">
-          <a href="">Contact</a>
+        <button className="bg-purple-400 rounded px-4 py-2  mr-3  text-white">
+          <a href="#contacts">Contact</a>
         </button>
       </div>
     </>
@@ -106,8 +103,8 @@ const MobileNavigationModal: React.FC<{
         <div className="flex flex-col gap-10 w-full  ">
           <NavComponent to="" label="Home" />
           <NavComponent to="" label="About " />
-          <NavComponent to="" label="Process" />
-          <NavComponent to="" label="POrtfolio" />
+          <NavComponent to="" label="Projects" />
+          <NavComponent to="" label="contacts" />
         </div>
       </div>
     </>
@@ -136,23 +133,23 @@ const NavComponent: React.FC<{ label: string; to: string }> = ({
         initial={initial}
         animate={animate}
         transition={transition}
-        className="hidden fixed top-0  lg:flex items-center  shadow-lg shadow-gray-100  gap-10  justify-center ml-[100px] lg:ml-[550px] px-8 py-3 rounded-full mt-2 z-50 bg-white"
+        className="hidden fixed top-0  lg:flex items-center  shadow-md shadow-gray-200  gap-10  justify-center ml-[100px] lg:ml-[550px] px-8 py-3 rounded-full mt-2 z-50 bg-white"
       >
         {/* Your element content */}
         <a href="" className="text-sm font-semibold font-sans">
           Home
         </a>
-        <a href="" className="text-sm font-semibold font-sans">
-          About{" "}
+        <a href="#about" className="text-sm font-semibold font-sans">
+          About
         </a>
-        <a href="" className="text-sm font-semibold font-sans">
-          Process
+        <a href="#projects" className="text-sm font-semibold font-sans">
+          projects
         </a>
-        <a href="" className="text-sm font-semibold font-sans">
-          Portfolio
+        <a href="#services" className="text-sm font-semibold font-sans">
+          services
         </a>
-        <a href="" className="text-sm font-semibold font-sans">
-          Services
+        <a href="#contacts" className="text-sm font-semibold font-sans">
+          contacts
         </a>
       </motion.div>
     );

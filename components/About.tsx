@@ -13,8 +13,8 @@ function About() {
     <>
       <div 
       
-      className=" flex items-center justify-center relative h-[60vh]">
-        <motion.div className=" h-[750px] md:h-[800px] lg:h-[100%]  shadow-2xl rounded-xl shadow-gray-200 bg-white   absolute top-[80px] border-black px-2 md:mx-10 lg:right-56 lg:left-56 flex p-4  flex-col lg:flex-row  "initial={initial}  whileInView={animate} transition={transition}>
+      className=" flex items-center justify-center relative h-[60vh]" id="about">
+        <motion.div className=" h-[750px] md:h-[800px] lg:h-[100%]  shadow-2xl rounded-xl shadow-gray-200 bg-white   absolute top-[80px] border-black px-2 md:mx-10 lg:right-56 lg:left-56 flex p-4  flex-col lg:flex-row  " initial={initial}  whileInView={animate} transition={transition}>
           <div className=" w-full lg:w-5/12  p-3 flex items-center justify-center">
           <Image src={'/assets/p12.png'}  height={100} width={500} alt=""  className="w-[90%] md:h-72"/>
           <ContactComponent />
@@ -40,7 +40,7 @@ function About() {
         </motion.div>
       </div>
       
-      <div className="h-[100vh] w-full bg-gray-50 "></div>
+     
     </>
   );
 }
@@ -60,20 +60,23 @@ const More:React.FC=()=>{
 const Contact:React.FC<{img:string,to:string}>=({img,to})=>{
   
    return <>
+   <a href={to} target="_blank">
         <button className={`p-2 rounded transition-all border border-purple-500 hover:scale-110 delay-75`} >
             <Image src={img}  width={20} height={20} alt="" />
         </button>
+
+   </a>
    </>
 }
 
 
-const ContactComponent:React.FC=()=>{
+export const ContactComponent:React.FC=()=>{
      return  <>
          <div className="absolute md:bottom-10 md:right-4 lg:left-24 md:flex gap-2 px-4 py-2  w-[200px] shadow-2xl shadow-gray-200 bg-white hidden md">
-             <Contact img="/assets/instagram.svg" to=""/>
-             <Contact img="/assets/linkedin.svg" to=""/>
-             <Contact img="/assets/github.svg" to=""/>
-             <Contact img="/assets/twitter-alt.svg" to=""/>
+             <Contact img="/assets/instagram.svg" to="https://www.instagram.com/direct/new/?username=s_angel.11"/>
+             <Contact img="/assets/linkedin.svg" to="https://twitter.com/messages/compose?recipient_id={user_id}"/>
+             <Contact img="/assets/github.svg" to="https://github.com/Angelosewase"/>
+             <Contact img="/assets/twitter-alt.svg" to="https://x.com/angel_sewase"/>
          </div>
      </>
 }
