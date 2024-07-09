@@ -1,8 +1,7 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { PaperAirplaneIcon } from "@heroicons/react/24/outline";
-
 
 function ContactForm() {
   const [formState, setFormState] = useState<FormState>({
@@ -12,6 +11,46 @@ function ContactForm() {
     subject: "",
     message: "",
   });
+
+  const [status, setStatus] = useState<null | string>(null);
+  const [isDisabled, setIsDisabled] = useState<boolean>(true);
+
+  useEffect(() => {
+    if (
+      formState.email &&
+      formState.location &&
+      formState.message &&
+      formState.name &&
+      formState.subject
+    ) {
+      setIsDisabled(false);
+    }
+  }, [formState]);
+
+  async function handleformSubmission() {
+    const response = await fetch("/api/sendEmail", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({ ...formState }),
+    });
+    const data = await response.json();
+
+    if (data.success) {
+      setStatus("Email sent successfully!");
+    } else {
+      console.log(data);
+      setStatus("Failed to send email.");
+    }
+    setFormState({
+      name: null,
+      email: null,
+      location: null,
+      message: null,
+      subject: null,
+    });
+  }
 
   return (
     <div>
@@ -24,14 +63,14 @@ function ContactForm() {
           field="name"
           setdatastate={setFormState}
           formState={formState}
-          value={formState.name}
+          value={formState.name || ""}
           placeholder="Name*"
         />
         <Input
           field="email"
           setdatastate={setFormState}
           formState={formState}
-          value={formState.email}
+          value={formState.email || ""}
           placeholder="Email*"
           type="email"
         />
@@ -39,28 +78,35 @@ function ContactForm() {
           field="location"
           setdatastate={setFormState}
           formState={formState}
-          value={formState.location}
+          value={formState.location || ""}
           placeholder="Location*"
         />
         <Input
           field="subject"
           setdatastate={setFormState}
           formState={formState}
-          value={formState.subject}
+          value={formState.subject || ""}
           placeholder="Subject*"
         />
         <Input
           field="message"
           setdatastate={setFormState}
           formState={formState}
-          value={formState.message}
+          value={formState.message || ""}
           placeholder="Message*"
         />
       </form>
-      <button className="flex gap-2 items-center py-1 px-3 rounded bg-purple-500 text-white md:mt-10 mt-20 hover:scale-110 transition">
-        Submit 
-        <PaperAirplaneIcon height={22} width={22}/>
+      <button
+        className={`flex gap-2 items-center py-1 px-3 rounded   bg-purple-500 text-white md:mt-10 mt-20 ${
+          !isDisabled && "hover:scale-110"
+        } transition  ${ isDisabled && 'opacity-50'}`}
+        onClick={handleformSubmission}
+        disabled={isDisabled}
+      >
+        Submit
+        <PaperAirplaneIcon height={22} width={22} />
       </button>
+      {status && <p className="text-sm text-purple-500">{status}</p>}
     </div>
   );
 }
@@ -74,7 +120,14 @@ const Input: React.FC<{
   value: string;
   placeholder: string;
   type?: string;
-}> = ({ setdatastate, field, formState, value, placeholder, type = "text" }) => {
+}> = ({
+  setdatastate,
+  field,
+  formState,
+  value,
+  placeholder,
+  type = "text",
+}) => {
   const [state, setState] = useState<boolean>(false);
 
   function handleInput(value: string) {
@@ -109,10 +162,10 @@ const Input: React.FC<{
   );
 };
 
-interface FormState {
-  name: string;
-  email: string;
-  location: string;
-  subject: string;
-  message: string;
+export interface FormState {
+  name: string | null;
+  email: string | null;
+  location: string | null;
+  subject: string | null;
+  message: string | null;
 }
