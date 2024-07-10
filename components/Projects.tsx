@@ -15,7 +15,7 @@ function Projects() {
         ))}
       </div>
       <a
-        href=""
+        href="https://github.com/Angelosewase"
         className="border border-purple-500  mt-5 mb-3  px-4 py-0.5 text-purple-700 flex   items-center gap-2  hover:bg-purple-500 hover:text-white transition-all  rounded hover:scale-110 "
       >
         check out more on github
@@ -107,7 +107,7 @@ const projects: Array<project> = [
   {
     imgurl: "/assets/projects/doct.png",
     name: "Doct",
-    link: "",
+    link: "https://github.com/Angelosewase/Doct",
     techstark: ["react", "tailwindcss", "typescript"],
     description:
       "Doct web app streamlines medical operations with features like appointment scheduling, patient records, billing, prescriptions, and communication, enhancing efficiency and care quality.",
@@ -115,7 +115,7 @@ const projects: Array<project> = [
   {
     imgurl: "/assets/projects/gura.png",
     name: "Gura",
-    link: "",
+    link: "https://github.com/Angelosewase/Gura",
     techstark: ["react", "tailwindcss"],
     description:
       "Gura implements online buying and selling of products, featuring product listings, shopping cart, secure payments, and order management, enhancing convenience for users",
@@ -123,7 +123,7 @@ const projects: Array<project> = [
   {
     imgurl: "/assets/projects/rideShare.png",
     name: "Ride share",
-    link: "",
+    link: "https://github.com/Angelosewase/ride-share",
     techstark: ["react native", "tailwindcss", "typescript", "expo"],
     description:
       "A transport and delivery app facilitates efficient logistics management, enabling users to request and track deliveries, manage routes, and ensure timely transportation of goods or services.",
@@ -131,7 +131,7 @@ const projects: Array<project> = [
   {
     imgurl: "/assets/projects/deliveroo.png",
     name: "Delivoroo <clone>",
-    link: "",
+    link: "https://github.com/Angelosewase/deliveroo-clone",
     techstark: ["react native", "tailwindcss", "typescript", "expo"],
     description:
       "I created a Deliveroo clone as a learning project where I tackled various challenges, gained valuable experience, and honed my skills in building a comprehensive food delivery platform.",
@@ -139,7 +139,7 @@ const projects: Array<project> = [
   {
     imgurl: "/assets/projects/iLead.png",
     name: "I Lead",
-    link: "",
+    link: "https://github.com/Angelosewase/ilead",
     techstark: ["react", "tailwindcss", "typescript"],
     description:
       " iLead management system .This web-based platform will  track student progress,  manage resources and day to day operation of i lead program in RCA",
@@ -147,7 +147,7 @@ const projects: Array<project> = [
   {
     imgurl: "/assets/projects/nextjsdashboard.png",
     name: "nextjs dashboard",
-    link: "",
+    link: "https://github.com/Angelosewase/nextjs-dashboard",
     techstark: ["nextjs", "tailwindcss", "node js ", "typescript"],
     description:
       "A sales dashboard learning project visualizes sales data, showing key metrics and trends to help you practice monitoring progress and making data-driven decisions.",

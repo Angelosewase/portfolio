@@ -115,6 +115,7 @@ const MobileNavigationModal: React.FC<{
           <NavComponent to="" label="Home" setState={setState} />
           <NavComponent to="#about" label="About " setState={setState} />
           <NavComponent to="#projects" label="Projects" setState={setState} />
+          <NavComponent to="#services" label="services" setState={setState} />
           <NavComponent to="#contacts" label="contacts" setState={setState} />
         </div>
       </div>
