@@ -115,7 +115,7 @@ const projects: Array<project> = [
   {
     imgurl: "/assets/projects/gura.png",
     name: "Gura",
-    link: "https://github.com/Angelosewase/Gura",
+    link: "https://gura-kappa.vercel.app",
     techstark: ["react", "tailwindcss"],
     description:
       "Gura implements online buying and selling of products, featuring product listings, shopping cart, secure payments, and order management, enhancing convenience for users",
